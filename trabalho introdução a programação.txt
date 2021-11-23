@@ -1,0 +1,101 @@
+//******************************************************//
+PROGRAMA PARA ADIVINHAR O NUMERO ESCOLHIDO ALEATORIAMENTE PELA MAQUINA
+
+/********************************************************/
+#include <stdio.h>
+#include <iostream>
+
+using namespace std;
+
+
+int main()
+{
+   time_t t;
+    srand((unsigned) time(&t));
+    
+    int numeroMaquina = 0;
+    int numeroUsuario = 0;
+    int tentativas = 0;
+    
+    string pista;
+    numeroMaquina = rand() % 50;
+    //cout << "exibe para testes: \n" << numeroMaquina;
+    cout << "Tente acertar o numero que eu estou pensando: \n";
+    cin >> numeroUsuario;
+    
+    if(numeroUsuario == numeroMaquina){
+        cout << "Parabens!!! Você acertou";
+    }
+    
+    while(numeroUsuario != numeroMaquina){
+        tentativas++;
+        
+        if(numeroMaquina > numeroUsuario){
+            pista = "maior";
+        }else{
+            pista = "menor";
+        }
+        
+        cout << "Errou! Tente novamente: \n";
+        if(tentativas > 1){
+        cout << "O valor é: " << pista << " que o digigtado";
+            
+        }
+        cin >> numeroUsuario;
+    }
+    
+     if(numeroUsuario == numeroMaquina){
+        cout << "Parabens!!! Você acertou";
+    }
+    
+    return 0;
+}
+
+//**************************************************************************************//
+PROGRAMA QUE ADIVINHA O RESULTADA DAS OPERAÇÕES ENVOLVENDO UM NUMERO QUE VC ESCOLHEU
+//**************************************************************************************//
+
+/******************************************************************************
+
+                            Online C Compiler.
+                Code, Compile, Run and Debug C program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+#include <stdio.h>
+#include <iostream>
+#include <cstdlib>
+
+using namespace std;
+
+int main()
+{
+    
+    time_t t;
+    srand((unsigned) time(&t));
+    int numeroBase;
+    int numeroFinal;
+    
+    numeroBase = rand() % 10 *2;
+    numeroFinal = rand() % 100 *2;
+    if(numeroBase == 0){
+        numeroBase = 2;
+    }
+
+    cout << "Pense em um numero, não me fale, siga os passos e eu adivinharei o resultado das operações envolvendo o seu numero: \n" << numeroBase << numeroFinal;
+    
+    cout << "Multiplique o numero por " << numeroBase << "\n";
+    getchar();
+    cout << "Some" << numeroFinal << "\n";
+    getchar();
+    
+    cout << "Divida por "<< numeroBase << "\n";
+    getchar(); 
+    
+    cout << "Agora, diminua pelo numero que vc pensou";
+    getchar(); 
+    cout << " o O resultado deu: " << numeroFinal /2;
+    
+    return 0;
+}
+
