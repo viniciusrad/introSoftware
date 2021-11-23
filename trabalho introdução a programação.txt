@@ -82,8 +82,9 @@ int main()
         numeroBase = 2;
     }
 
-    cout << "Pense em um numero, não me fale, siga os passos e eu adivinharei o resultado das operações envolvendo o seu numero: \n" << numeroBase << numeroFinal;
-    
+     cout << "Pense em um numero, não me fale, siga os passos e eu adivinharei o resultado das operações envolvendo o seu numero: \n";    
+    //cout << "numeroBase" << numeroBase << "numeroFinal" << numeroFinal // saida de testes
+
     cout << "Multiplique o numero por " << numeroBase << "\n";
     getchar();
     cout << "Some" << numeroFinal << "\n";
